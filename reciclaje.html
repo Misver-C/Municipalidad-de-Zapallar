@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Zapallar - Reciclaje</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos generales del header -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <div class="header-blue-section">
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <a href="contacto.html" class="btn-contacto">CONTACTO</a>
+            </div>
+            
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+                <li class="dropdown">
+                    <a href="quienes_somos.html">QUIENES SOMOS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+                    </ul>
+                </li>
+                <li><a href="tramites.html">TRÁMITES</a></li>
+                <li><a href="seguridad.html">SEGURIDAD</a></li>
+                <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">MEDIOAMBIENTE</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reciclaje.html" class="active">RECICLAJE</a></li>
+                        <li><a href="#">SUSTENTABILIDAD</a></li>
+                        <li><a href="#">ÁREAS VERDES</a></li>
+                        <li><a href="#">MANTENCIÓN</a></li>
+                    </ul>
+                </li>
+                <li><a href="cultura.html">CULTURA</a></li>
+                <li><a href="tarjeta.html">TARJETA DE VECINO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== 1. HERO PORTADA (RECICLAJE) ==================== -->
+    <section class="tarjeta-hero">
+        <!-- Espacio reservado para la imagen de portada de Reciclaje -->
+        <img src="imagen_munizapallar/reciclaje1.jpg" alt="Reciclaje Ilustre Municipalidad de Zapallar" class="tarjeta-hero-img">
+        
+        <div class="tarjeta-hero-overlay">
+            <!-- Título Hero con guiones decorativos -->
+            <div class="tarjeta-hero-title">
+                <span class="dash" style="background-color: #f5a623;"></span>
+                <h1>Reciclaje</h1>
+                <span class="dash" style="background-color: #f5a623;"></span>
+            </div>
+
+            <!-- Caja Azul de llamado a la acción (Programas de Reciclaje) -->
+            <div class="tarjeta-hero-box" style="max-width: 650px;">
+                <p style="font-size: 1.35rem; font-weight: 700;">¡Inscríbete a los programas de reciclaje!</p>
+                <div class="emergencia-cols" style="width: 100%;">
+                    <!-- Programa 1 -->
+                    <div class="emergencia-col">
+                        <span style="font-weight: 600; font-size: 1rem; margin-bottom: 6px;">Programa Retiro Orgánico</span>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1Ll5QUI8aMPc5wcCRrwHkfj4ArBzX6A24ORMz02JEopd_gg/viewform" class="btn-tarjeta-cta">¡INSCRÍBETE AQUÍ!</a>
+                    </div>
+                    <!-- Programa 2 -->
+                    <div class="emergencia-col">
+                        <span style="font-weight: 600; font-size: 1rem; margin-bottom: 6px;">Programa Punto Limpio Móvil</span>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBra8COqT-Om-TQlPySChqMYSHqlUj6y5s9BPRO5CWpvmgjg/viewform" class="btn-tarjeta-cta">¡INSCRÍBETE AQUÍ!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <main class="main-container">
+
+        <!-- ==================== 2. SECCIÓN: ¡REDUCE, REUTILIZA, REPARA, RECICLA! ==================== -->
+        <section class="salud-seccion">
+            <div class="section-title-container">
+                <span class="dash"></span>
+                <h2>¡Reduce, reutiliza, repara, recicla!</h2>
+                <span class="dash"></span>
+            </div>
+
+            <p class="salud-intro-text">
+                Contamos con un amplio programa de reciclaje, donde hay distintas alternativas para reciclar envases y embalajes, orgánicos, colillas de cigarro y aceite de cocina.
+            </p>
+
+            <p class="salud-bajada-text">
+                ¡Aquí más información de los lugares y todos nuestros programas para que puedas reciclar!
+            </p>
+
+            <!-- Grilla de Tarjetas: 3 Tarjetas centradas -->
+            <div class="salud-grid">
+                <!-- Tarjeta 1: Punto Limpio Municipal -->
+                <a href="#" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/reciclaje3.png" alt="Punto Limpio Municipal">
+                    </div>
+                    <span class="salud-card-title">Punto Limpio Municipal</span>
+                </a>
+
+                <!-- Tarjeta 2: Puntos Verdes -->
+                <a href="#" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/reciclaje4.png" alt="Puntos Verdes">
+                    </div>
+                    <span class="salud-card-title">Puntos Verdes</span>
+                </a>
+
+                <!-- Tarjeta 3: Puntos de Reciclaje de Aceite -->
+                <a href="#" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/reciclaje5.png" alt="Puntos de Reciclaje de Aceite">
+                    </div>
+                    <span class="salud-card-title">Puntos de Reciclaje de Aceite</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== 3. BANNER: CAPACITACIÓN PARA RECICLAJE ==================== -->
+    <section class="tarjeta-hero" style="min-height: 280px; margin-bottom: 0;">
+        <!-- Espacio reservado para la imagen de fondo de Capacitación -->
+        <img src="imagen_munizapallar/reciclaje2.png" alt="Capacitación para Reciclaje" class="tarjeta-hero-img">
+        
+        <div class="tarjeta-hero-overlay" style="max-width: 1200px; width: 100%; padding: 40px 30px; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Bloque Izquierdo: Título y Bajada explicativa -->
+            <div style="max-width: 650px; text-align: left;">
+                <div class="tarjeta-hero-title" style="margin-bottom: 12px; justify-content: flex-start;">
+                    <span class="dash" style="background-color: #f5a623;"></span>
+                    <h2 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 700; color: #ffffff; margin: 0; text-transform: uppercase;">Capacitación para reciclaje</h2>
+                </div>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; line-height: 1.5; color: #ffffff; margin: 0;">
+                    Te invitamos a inscribirte y asistir, para saber qué cosas se pueden reciclar y cuál es la manera correcta de disponerlas.
+                </p>
+            </div>
+
+            <!-- Bloque Derecho: Botón CTA -->
+            <div>
+                <a href="#" class="btn-tarjeta-cta-solido" style="padding: 12px 28px; white-space: nowrap;">¡INSCRÍBETE AQUÍ!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

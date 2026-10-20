@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Zapallar - Quiénes Somos</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER (REUTILIZABLE EN TODAS LAS PANTALLAS) ==================== -->
+    <header>
+        <div class="header-container">
+            <!-- Bloque izquierdo con el logo -->
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <!-- Bloque azul central con redes sociales, buscador y contacto -->
+            <div class="header-blue-section">
+                <!-- Redes sociales -->
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Barra de búsqueda -->
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <!-- Botón de contacto -->
+                <a href="contacto.html" class="btn-contacto">CONTACTO</a>
+            </div>
+            
+            <!-- Espacio en blanco derecho -->
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <nav class="header-nav">
+    <ul>
+        <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+        <li class="dropdown">
+            <a href="quienes_somos.html"class="active">QUIENES SOMOS</a>
+            <ul class="dropdown-menu">
+                <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+            </ul>
+        </li>
+        <li><a href="tramites.html" >TRÁMITES</a></li>
+        <li><a href="seguridad.html">SEGURIDAD</a></li>
+        <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+            <a href="#">MEDIOAMBIENTE</a>
+            <ul class="dropdown-menu">
+                <li><a href="reciclaje.html">RECICLAJE</a></li>
+                <li><a href="#">SUSTENTABILIDAD</a></li>
+                <li><a href="#">ÁREAS VERDES</a></li>
+                <li><a href="#">MANTENCIÓN</a></li>
+            </ul>
+        </li>
+        <li><a href="cultura.html">CULTURA</a></li>
+        <li><a href="tarjeta.html">TARJETA DE VECINO</a></li>
+    </ul>
+</nav>
+
+
+    <!-- ==================== HERO AUTORIDADES (DE EXTREMO A EXTREMO) ==================== -->
+    <section class="autoridades-hero">
+        <img src="imagen_munizapallar/im_autoridades1.jpg" alt="Autoridades Municipales de Zapallar" class="autoridades-hero-img">
+        <div class="autoridades-hero-overlay">
+            <h1>AUTORIDADES MUNICIPALES</h1>
+            <p>ILUSTRE MUNICIPALIDAD DE ZAPALLAR</p>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN AUTORIDADES (FONDO BLANCO DE EXTREMO A EXTREMO) ==================== -->
+    <section class="alcalde-full-wrapper">
+        <!-- Tarjeta del Alcalde -->
+        <div class="alcalde-card">
+            <div class="alcalde-info">
+                <h2>Gustavo Alessandri Bascuñán</h2>
+                <span class="alcalde-cargo">Alcalde de Zapallar</span>
+                
+                <p class="alcalde-bio">
+                    Abogado de profesión y agricultor de oficio, alcalde de la comuna de Zapallar el año 2016, siendo reelecto en mayo del 2021.
+                </p>
+                
+                <div class="alcalde-contacto">
+                    <p><strong>Teléfono:</strong> <a href="tel:+56332296802">+56 33 229 6802</a></p>
+                    <p><strong>Correo Electrónico:</strong> <a href="mailto:alcaldia@munizapallar.cl">alcaldia@munizapallar.cl</a></p>
+                </div>
+            </div>
+
+            <!-- Contenedor de la Imagen del Alcalde -->
+            <div class="alcalde-img-container">
+                <img src="imagen_munizapallar/alcalde.jpg" alt="Gustavo Alessandri Bascuñán - Alcalde de Zapallar" class="alcalde-img">
+            </div>
+        </div>
+
+        <!-- ==================== SECCIÓN CONCEJALES ==================== -->
+        <div class="concejales-container">
+            
+            <!-- Concejal 1: Cecilia Garcia Huidobro Moroder -->
+            <article class="concejal-card">
+                <div class="concejal-info">
+                    <h2>Cecilia Garcia Huidobro Moroder</h2>
+                    <span class="concejal-cargo">Concejal de Zapallar</span>
+                    <div class="concejal-contacto">
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:c.garciahuidobro@munizapallar.cl">c.garciahuidobro@munizapallar.cl</a></p>
+                    </div>
+                </div>
+                <div class="concejal-img-container">
+                    <img src="imagen_munizapallar/concejalcecilia.jpg" alt="Cecilia Garcia Huidobro Moroder" class="concejal-img">
+                </div>
+            </article>
+
+            <!-- Concejal 2: Carmen Rosa Ringeling Vicuña -->
+            <article class="concejal-card">
+                <div class="concejal-info">
+                    <h2>Carmen Rosa Ringeling Vicuña</h2>
+                    <span class="concejal-cargo">Concejal de Zapallar</span>
+                    <div class="concejal-contacto">
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:carmen.ringeling@munizapallar.cl">carmen.ringeling@munizapallar.cl</a></p>
+                    </div>
+                </div>
+                <div class="concejal-img-container">
+                    <img src="imagen_munizapallar/concejalcarmen.jpg" alt="Carmen Rosa Ringeling Vicuña" class="concejal-img">
+                </div>
+            </article>
+
+            <!-- Concejal 3: Danilo Fernández Peña -->
+            <article class="concejal-card">
+                <div class="concejal-info">
+                    <h2>Danilo Fernández Peña</h2>
+                    <span class="concejal-cargo">Concejal de Zapallar</span>
+                    <div class="concejal-contacto">
+                        <p><strong>Teléfono:</strong> <a href="tel:+56985056713">+56 9 8505 6713</a></p>
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:dfernandez@munizapallar.cl">dfernandez@munizapallar.cl</a></p>
+                    </div>
+                </div>
+                <div class="concejal-img-container">
+                    <img src="imagen_munizapallar/concejaldanilo.jpg" alt="Danilo Fernández Peña" class="concejal-img">
+                </div>
+            </article>
+
+            <!-- Concejal 4: Luis Guajardo Abarca -->
+            <article class="concejal-card">
+                <div class="concejal-info">
+                    <h2>Luis Guajardo Abarca</h2>
+                    <span class="concejal-cargo">Concejal de Zapallar</span>
+                    <div class="concejal-contacto">
+                        <p><strong>Teléfono:</strong> <a href="tel:+56985059257">+56 9 8505 9257</a></p>
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:lguajardo@munizapallar.cl">lguajardo@munizapallar.cl</a></p>
+                    </div>
+                </div>
+                <div class="concejal-img-container">
+                    <img src="imagen_munizapallar/concejalluis.jpg" alt="Luis Guajardo Abarca" class="concejal-img">
+                </div>
+            </article>
+
+            <!-- Concejal 5: Reinaldo Fernández Silva -->
+            <article class="concejal-card">
+                <div class="concejal-info">
+                    <h2>Reinaldo Fernández Silva</h2>
+                    <span class="concejal-cargo">Concejal de Zapallar</span>
+                    <div class="concejal-contacto">
+                        <p><strong>Correo Electrónico:</strong> <a href="mailto:reinaldofernandez@munizapallar.cl">reinaldofernandez@munizapallar.cl</a></p>
+                    </div>
+                </div>
+                <div class="concejal-img-container">
+                    <img src="imagen_munizapallar/concejalreinaldo.jpg" alt="Reinaldo Fernández Silva" class="concejal-img">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ADICIONAL (1280px) ==================== -->
+    <main class="main-container">
+        
+        <!-- ==================== SECCIÓN PLAN REGULADOR COMUNAL VIGENTE ==================== -->
+        <section class="plan-regulador-section">
+            <div class="plan-regulador-header">
+                <h2><span class="dash">-</span> PLAN REGULADOR COMUNAL VIGENTE <span class="dash">-</span></h2>
+                <p>
+                    Entérate de la planificación territorial vigente; las condiciones adecuadas de edificación, disposiciones de espacios urbanos y de comodidad en la relación funcional entre las zonas habitacionales, de trabajo, equipamiento y esparcimiento.
+                </p>
+            </div>
+
+            <div class="plan-regulador-list">
+                <!-- 1. Ordenanza Local Zapallar -->
+                <a href="documentos/ORDENANZA_LOCAL_ZAPALLAR.pdf" class="pdf-item prc-item" target="_blank">
+                    <span class="pdf-title">Ordenanza Local Zapallar</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+
+                <!-- 2. Estudio Factibilidad de Agua PRC -->
+                <a href="documentos/Estudi_Factibilidad_de_Agua_PRC.pdf" class="pdf-item prc-item" target="_blank">
+                    <span class="pdf-title">Estudio Factibilidad de Agua PRC</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+
+                <!-- 3. Plano Oficial Comunal Zapallar (Sin archivo PDF) -->
+                <div class="pdf-item prc-item" style="cursor: default;">
+                    <span class="pdf-title">Plano Oficial Comunal Zapallar</span>
+                </div>
+
+                <!-- 4. Memoria Explicativa PRC -->
+                <a href="documentos/Memoria_Explicativa_PRC.pdf" class="pdf-item prc-item" target="_blank">
+                    <span class="pdf-title">Memoria Explicativa PRC</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER (PIE DE PÁGINA REUTILIZABLE) ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Columna 1: Logo -->
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <!-- Columna 2: Contacto e Información -->
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <!-- Columna 3: Accesos Directos e Intranet -->
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Franja inferior de derechos -->
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+
+    <!-- Archivo de JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

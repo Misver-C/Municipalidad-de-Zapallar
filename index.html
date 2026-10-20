@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Zapallar - Inicio</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER (REUTILIZABLE EN TODAS LAS PANTALLAS) ==================== -->
+    <header>
+        <div class="header-container">
+            <!-- Bloque izquierdo con el logo -->
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <!-- Bloque azul central con redes sociales, buscador y contacto -->
+            <div class="header-blue-section">
+                <!-- Redes sociales -->
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Barra de búsqueda -->
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <!-- Botón de contacto -->
+                <a href="contacto.html" class="btn-contacto">CONTACTO</a>
+            </div>
+            
+            <!-- Espacio en blanco derecho -->
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <nav class="header-nav">
+    <ul>
+        <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+        <li class="dropdown">
+            <a href="quienes_somos.html">QUIENES SOMOS</a>
+            <ul class="dropdown-menu">
+                <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+            </ul>
+        </li>
+        <li><a href="tramites.html">TRÁMITES</a></li>
+        <li><a href="seguridad.html">SEGURIDAD</a></li>
+        <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+            <a href="#">MEDIOAMBIENTE</a>
+            <ul class="dropdown-menu">
+                <li><a href="reciclaje.html">RECICLAJE</a></li>
+                <li><a href="#">SUSTENTABILIDAD</a></li>
+                <li><a href="#">ÁREAS VERDES</a></li>
+                <li><a href="#">MANTENCIÓN</a></li>
+            </ul>
+        </li>
+        <li><a href="cultura.html">CULTURA</a></li>
+        <li><a href="tarjeta.html">TARJETA DE VECINO</a></li>
+    </ul>
+</nav>
+
+
+    <!-- ==================== BANNER ESTÁNDAR ==================== -->
+    <section class="standard-banner" id="dynamicBanner">
+        <div class="banner-content">
+            <h1 id="bannerTitle">NOTICIAS DESTACADAS</h1>
+            <p id="bannerSubtitle">¡Entérate de lo último!</p>
+        </div>
+    </section>
+
+    <!-- ==================== CONTENIDO PRINCIPAL DE LA PÁGINA (INICIO) ==================== -->
+    <main class="main-container">
+        <!-- Cuadrícula de Noticias Destacadas -->
+        <div class="news-grid">
+            
+         <!-- Tarjeta 1 -->
+            <article class="news-card news-card-clickable" onclick="location.href='noticia1.html';" style="cursor: pointer;">
+                <img src="imagen_munizapallar/im_noticia1limpieza.jpg" alt="Limpieza Urbana Zapallar" class="news-img">
+                <div class="news-content">
+                    <h2>ZAPALLAR PREPARA NUEVO ESTÁNDAR DE LIMPIEZA URBANA CON 43 TRABAJADORES Y MAQUINARIA...</h2>
+                    <span class="news-date">3 de septiembre 2026</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="news-card">
+                <img src="imagen_munizapallar/im_noticia2diagnosticolab.jpg" alt="Diagnóstico Laboral" class="news-img">
+                <div class="news-content">
+                    <h2>ZAPALLAR INICIA DIAGNÓSTICO LABORAL DE TRABAJADORAS DE CASA PARTICULAR</h2>
+                    <span class="news-date">2 de septiembre 2026</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="news-card">
+                <img src="imagen_munizapallar/im_noticia3seguridad.jpg" alt="Seguridad Zapallar" class="news-img">
+                <div class="news-content">
+                    <h2>COORDINACIÓN Y HERRAMIENTAS PARA FORTALECER LA SEGURIDAD EN ZAPALLAR</h2>
+                    <span class="news-date">28 de agosto 2026</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="news-card">
+                <img src="imagen_munizapallar/im_noticia4inspeccion.jpg" alt="Inspección Preventiva Árboles" class="news-img">
+                <div class="news-content">
+                    <h2>INSPECCIÓN PREVENTIVA IDENTIFICA MÁS DE 50 ÁRBOLES CON RIESGO EN RUTAS E-462 Y F-30</h2>
+                    <span class="news-date">12 de agosto 2026</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 5 -->
+            <article class="news-card">
+                <img src="imagen_munizapallar/im_noticia5puente.jpg" alt="Puente Mecano Ruta E-462" class="news-img">
+                <div class="news-content">
+                    <h2>PUENTE MECANO RESTABLECE CONEXIÓN DE LA RUTA E-462 ENTRE LA LAGUNA Y CATAPILCO.</h2>
+                    <span class="news-date">8 de agosto 2026</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 6 -->
+            <article class="news-card">
+                <img src="imagen_munizapallar/im_noticia6cesfam.jpg" alt="Inauguración CESFAM Catapilco" class="news-img">
+                <div class="news-content">
+                    <h2>CUENTA PÚBLICA 2025-2026 E INAUGURACIÓN DEL CESFAM DE CATAPILCO</h2>
+                    <span class="news-date">3 de julio 2026</span>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ==================== SECCIÓN CUENTA PÚBLICA (PDFs) ==================== -->
+        <section class="cuenta-publica-section">
+            <div class="cuenta-publica-header">
+                <h2>CUENTA PÚBLICA</h2>
+                <p>En tus manos está el reflejo de todo el trabajo realizado cada año para la comunidad de Zapallar ¡Revísalo aquí!</p>
+            </div>
+
+            <div class="cuenta-publica-list">
+                <!-- 2026 -->
+                <a href="documentos/CUENTA_PUBLICA_2026.pdf" target="_blank" class="pdf-item active-pdf">
+                    <span class="pdf-year">2026</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2025 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2025</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2024 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2024</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2023 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2023</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2022 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2022</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2021 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2021</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2020 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2020</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2019 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2019</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+                <!-- 2018 -->
+                <a href="#" target="_blank" class="pdf-item">
+                    <span class="pdf-year">2018</span>
+                    <i class="fa-solid fa-cloud-arrow-down pdf-icon"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN PLAN DE GOBIERNO LOCAL 2024-2028 ==================== -->
+        <section class="plan-gobierno-section">
+            <div class="plan-gobierno-header">
+                <h2>Plan de Gobierno Local 2024–2028</h2>
+                <p>Entérate de nuestros planes de gobiernos para mejorar nuestra comunidad.</p>
+            </div>
+
+            <div class="plan-gobierno-list">
+                <!-- Desplegable 1: Adultos Mayores -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>Adultos Mayores</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="recorriendosueños.html">Recorriendo Sueños</a></li>
+                            <li><a href="#">Malones Bailables</a></li>
+                            <li><a href="#">Convenio FALP</a></li>
+                            <li><a href="#">Áreas recreativas</a></li>
+                            <li><a href="#">Zapallar Te Abriga</a></li>
+                            <li><a href="#">Programas Municipales para personas mayores</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 2: DIDECO -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>DIDECO</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Programas de Ayudas Sociales</a></li>
+                            <li><a href="#">Ruta Social Conectada</a></li>
+                            <li><a href="#">Capacitaciones permanentes a las Organizaciones Comunitarias</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 3: SECPLA -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>SECPLA</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Mejoras Viales que Transforman Zapallar</a></li>
+                            <li><a href="#">Nuevo CESFAM de Catapilco Alcanza 99% de Avance y Autoridades Inspeccionan Obras en Etapa Final</a></li>
+                            <li><a href="#">Alcalde Alessandri Anuncia Nuevo CESFAM Para Zapallar y Completa Remodelación DEL Liceo Bicentenario</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 4: Deportes -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>Deportes</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Primer Torneo WKF COPA ZAPALLAR 2025</a></li>
+                            <li><a href="#">Conservatorio y Clínica de Fútbol Con Humberto Chupete Suazo</a></li>
+                            <li><a href="#">Semanas por Localidad</a></li>
+                            <li><a href="#">Team Zapallar 2025: 30 deportistas reciben becas municipales y apoyo técnico especializado</a></li>
+                            <li><a href="#">Con Las Leyendas del Fútbol Chileno se Realizó Lanzamiento Exterior del Complejo Deportivo Cachagua</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 5: Educación -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>Educación</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Nueva Infraestructura Liceo Bicentenario Zapallar</a></li>
+                            <li><a href="#">Programa rescatando experiencia y conocimiento</a></li>
+                            <li><a href="#">Transformación Digital</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 6: Emprendimiento y Fomento Productivo -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>Emprendimiento y Fomento Productivo</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Fondo de Apoyo a Emprendedores</a></li>
+                            <li><a href="#">Red de Guía y Apoyo Empresarial</a></li>
+                            <li><a href="#">Mercado Local y Feria de Emprendedores</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 7: DIMAO y Sustentabilidad -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>DIMAO y Sustentabilidad</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Programa de Retiro de Voluminosos</a></li>
+                            <li><a href="#">Programa Municipal de Retiro de Despunte Vegetal</a></li>
+                            <li><a href="#">Visitas Guiadas al Cerro de la Cruz y al Humedal Urbano La Laguna & Estero Catapilco</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- Desplegable 8: Seguridad, Inspección y Emergencia -->
+                <details class="accordion-item">
+                    <summary class="accordion-header">
+                        <span>Seguridad, Inspección y Emergencia.</span>
+                        <i class="fa-solid fa-chevron-down accordion-icon"></i>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Convenios Intermunicipales</a></li>
+                            <li><a href="#">Programa Rondas de Impacto</a></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER (PIE DE PÁGINA REUTILIZABLE) ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Columna 1: Logo -->
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <!-- Columna 2: Contacto e Información -->
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <!-- Columna 3: Accesos Directos e Intranet -->
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Franja inferior de derechos -->
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+
+    <!-- Archivo de JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

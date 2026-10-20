@@ -1,0 +1,2353 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-weight: 400;
+}
+
+/* --- HEADER REUTILIZABLE PARA TODAS LAS PANTALLAS --- */
+header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    background-color: #fff;
+}
+
+.header-logo {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+}
+
+.header-logo img {
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.header-blue-section {
+    background-color: #003366;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 30px;
+    row-gap: 8px;
+    padding: 12px 35px 12px 30px;
+    align-items: center;
+}
+
+.header-search {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    position: relative;
+    width: 100%;
+}
+
+.header-search input {
+    width: 100%;
+    padding: 7px 40px 7px 12px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.header-search input::placeholder {
+    color: #ccc;
+}
+
+.header-search i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-icons {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-contacto {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 5px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+}
+
+.btn-contacto:hover {
+    background-color: #fff;
+    color: #003366;
+}
+
+.header-right-spacer {
+    width: 45px;
+    background-color: #fff;
+}
+
+/* Barra de navegación secundaria */
+.header-nav {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    max-width: 1350px;
+    justify-content: space-around;
+}
+
+.header-nav li {
+    border-right: 1px solid #d5d5d5;
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+.header-nav li:first-child {
+    border-left: 1px solid #d5d5d5;
+}
+
+.header-nav a {
+    display: block;
+    padding: 12px 10px;
+    color: #222;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    background-color: #003366 !important;
+    color: #fff !important;
+}
+
+/* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    list-style: none;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.dropdown-menu li {
+    border-right: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 100%;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    padding: 12px 10px;
+    font-size: 13px;
+    color: #222;
+    background-color: #f1f1f1;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* --- FORMATO ESTÁNDAR: BANNER CON IMAGEN Y TEXTO (EXTREMO A EXTREMO 100%) --- */
+.standard-banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url('imagen_munizapallar/im_noticia_cabesera.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.standard-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.banner-content h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* --- HERO AUTORIDADES (EXTREMO A EXTREMO 100%) --- */
+.autoridades-hero {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    max-height: 380px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.autoridades-hero-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 15%; /* <--- Esto baja la perspectiva para enfocar los rostros */
+}
+.autoridades-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.autoridades-hero-overlay h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.autoridades-hero-overlay p {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+/* --- CONTENEDOR BLANCO FULL-WIDTH PARA AUTORIDADES (ALCALDE Y CONCEJALES) --- */
+.alcalde-full-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.alcalde-card {
+    max-width: 1280px;
+    margin: 0 auto 70px auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 60px;
+    align-items: center;
+}
+
+.alcalde-info h2 {
+    color: #003366;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.alcalde-cargo {
+    display: block;
+    color: #003366;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.alcalde-bio {
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.alcalde-contacto p {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.alcalde-contacto p:last-child {
+    margin-bottom: 0;
+}
+
+.alcalde-contacto a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.alcalde-contacto a:hover {
+    color: #003366;
+}
+
+/* Contenedor de la foto con los 4 bordes curvos simétricos */
+.alcalde-img-container {
+    width: 100%;
+    height: 480px;
+    border-radius: 60px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.alcalde-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #d1d5db;
+}
+
+.alcalde-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* --- SECCIÓN CONCEJALES (DENTRO DEL WRAPPER BLANCO - SIN LÍNEA DE SEPARACIÓN) --- */
+.concejales-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.concejal-card {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 60px;
+    align-items: center;
+}
+
+.concejal-info h2 {
+    color: #003366;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.concejal-cargo {
+    display: block;
+    color: #003366;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.concejal-contacto p {
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.concejal-contacto p:last-child {
+    margin-bottom: 0;
+}
+
+.concejal-contacto a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.concejal-contacto a:hover {
+    color: #003366;
+}
+
+/* Contenedor de la foto de los concejales con esquinas simétricas */
+.concejal-img-container {
+    width: 100%;
+    height: 360px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.concejal-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #d1d5db;
+}
+
+.concejal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* --- CONTENEDOR PRINCIPAL GLOBAL (1280px CENTRADO) --- */
+.main-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+/* --- CUADRÍCULA DE NOTICIAS --- */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 90px;
+}
+
+.news-card {
+    position: relative;
+    height: 340px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.news-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-img {
+    transform: scale(1.05);
+}
+
+.news-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.news-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 30%, rgba(0,0,0,0.85) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.news-content {
+    position: relative;
+    z-index: 3;
+    padding: 24px;
+    color: #ffffff;
+}
+
+.news-content h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
+.news-date {
+    font-size: 13px;
+    font-weight: 400;
+    color: #e0e0e0;
+    display: block;
+}
+
+/* --- SECCIÓN CUENTA PÚBLICA (PDFs) --- */
+.cuenta-publica-section {
+    max-width: 950px;
+    margin: 0 auto 90px auto;
+}
+
+.cuenta-publica-header {
+    margin-bottom: 25px;
+}
+
+.cuenta-publica-header h2 {
+    color: #003366;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.cuenta-publica-header p {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cuenta-publica-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pdf-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 18px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-item.active-pdf {
+    background-color: #003366;
+}
+
+.pdf-item:hover {
+    background-color: #002244;
+    transform: translateX(4px);
+}
+
+.pdf-year, .pdf-title {
+    letter-spacing: 0.5px;
+}
+
+.pdf-icon {
+    font-size: 24px;
+}
+
+/* --- SECCIÓN PLAN REGULADOR COMUNAL VIGENTE --- */
+.plan-regulador-section {
+    max-width: 950px;
+    margin: 40px auto 100px auto;
+}
+
+.plan-regulador-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.plan-regulador-header h2 {
+    color: #003366;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-transform: uppercase;
+}
+
+.plan-regulador-header h2 .dash {
+    font-weight: 800;
+    color: #003366;
+}
+
+.plan-regulador-header p {
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 780px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Lista con mayor separación vertical */
+.plan-regulador-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.prc-item {
+    padding: 22px 32px;
+}
+
+/* --- SECCIÓN PLAN DE GOBIERNO LOCAL 2024-2028 --- */
+.plan-gobierno-section {
+    max-width: 950px;
+    margin: 0 auto 270px auto;
+}
+
+.plan-gobierno-header {
+    margin-bottom: 25px;
+}
+
+.plan-gobierno-header h2 {
+    color: #003366;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.plan-gobierno-header p {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.plan-gobierno-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Acordeón / Desplegables */
+.accordion-item {
+    background-color: #003366;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-item:hover {
+    background-color: #002244;
+    transform: translateX(4px);
+}
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item[open] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Cuerpo del desplegable */
+.accordion-body {
+    background-color: #4A76A8;
+    padding: 20px 30px 25px 30px;
+}
+
+.accordion-body ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.accordion-body li {
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.accordion-body li:last-child {
+    margin-bottom: 0;
+}
+
+/* Enlaces interactivos de las listas internas */
+.accordion-body li a {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.accordion-body li a:hover {
+    text-decoration: underline;
+    transform: translateX(5px);
+    opacity: 0.9;
+}
+
+/* --- ESTILOS DEL FOOTER (PIE DE PÁGINA) --- */
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 0;
+    color: #333333;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-logo-col img {
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.footer-col p {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.footer-links-col ul {
+    list-style: none;
+    padding-top: 4px;
+}
+
+.footer-links-col ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links-col ul li a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links-col ul li a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+.intranet-link {
+    color: #0066cc !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #666666;
+    background-color: #fafafa;
+}
+/* ==========================================================================
+   HERO DEPARTAMENTOS MUNICIPALES (dep_municipales.html)
+   ========================================================================== */
+
+.departamentos-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.departamentos-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.departamentos-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.departamentos-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.departamentos-hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.departamentos-hero-overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Adaptabilidad para pantallas móviles */
+@media (max-width: 768px) {
+    .departamentos-hero {
+        height: 280px;
+    }
+
+    .departamentos-hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .departamentos-hero-overlay p {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* ==========================================================================
+   HERO DEPARTAMENTOS MUNICIPALES (dep_municipales.html)
+   ========================================================================== */
+
+.departamentos-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px; /* <--- Espacio agregado entre la portada y el contenido */
+}
+
+.departamentos-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.departamentos-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.departamentos-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.departamentos-hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.departamentos-hero-overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Adaptabilidad para pantallas móviles (Hero) */
+@media (max-width: 768px) {
+    .departamentos-hero {
+        height: 280px;
+        margin-bottom: 40px;
+    }
+
+    .departamentos-hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .departamentos-hero-overlay p {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
+/* ==========================================================================
+   ESTILOS SECCIÓN DEPARTAMENTOS MUNICIPALES (GRILLA Y ESPACIADOS)
+   ========================================================================== */
+
+.departamentos-section {
+    max-width: 1280px;
+    margin: 20px auto 90px auto; 
+    padding: 0 20px;
+}
+
+/* Título de sección con guiones decorativos */
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.section-title-container .dash {
+    width: 30px;
+    height: 3px;
+    background-color: #003366;
+}
+
+.section-title-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Grilla adaptable de 3 columnas */
+.departamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tarjeta individual con bordes curvos */
+.departamento-card {
+    background-color: #003366; /* Azul primario institucional */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Asegura que el contenido interno respete la curvatura */
+    border-radius: 10px; /* <--- Bordes curvos aplicados (puedes ajustarlo si prefieres otro radio) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.departamento-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título superior dentro de la tarjeta */
+.card-header-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenedor de la imagen y botón flotante */
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #002244;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Botón "Ver +" superpuesto al centro de la imagen */
+.btn-ver-mas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: rgba(0, 51, 102, 0.85);
+    border: 1.5px solid #ffffff;
+    padding: 6px 18px;
+    text-decoration: none;
+    border-radius: 4px; /* Un pequeño toque curvo también en el botón para mantener la armonía */
+    z-index: 5;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: rgba(0, 51, 102, 0.95);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Adaptabilidad responsive de la grilla */
+@media (max-width: 1024px) {
+    .departamentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .departamentos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   ESTILOS COMPLETOS DE LA PÁGINA DE TRÁMITES (tramites.html)
+   ========================================================================== */
+
+/* --- 1. HERO TRÁMITES ONLINE --- */
+.tramites-hero {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.tramites-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.tramites-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.tramites-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.tramites-hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.tramites-hero-overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* --- 2. SECCIÓN: ¿QUÉ QUIERES HACER? --- */
+.tramites-opciones-section {
+    max-width: 1100px;
+    margin: 60px auto 120px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #444444;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.tramites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    justify-items: center;
+}
+
+.tramite-card {
+    background-color: #01366c; /* Color institucional exacto solicitado */
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px 20px 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tramite-card:hover {
+    transform: translateY(-5px);
+    background-color: #012850; /* Tono ligeramente más oscuro al pasar el mouse */
+}
+
+.tramite-card-center {
+    grid-column: 2 / 3;
+}
+
+/* Contenedor del pictograma */
+.tramite-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* Imagen del pictograma agrandada */
+.tramite-icon img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.tramite-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+
+/* --- 3. SECCIÓN: CONTÁCTANOS --- */
+.contacto-tramites-section {
+    max-width: 1200px;
+    margin: 80px auto 140px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contacto-col h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 12px;
+}
+
+.contacto-col p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.contacto-col a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.contacto-col a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+.horario-sub {
+    font-weight: 600;
+    color: #003366;
+    margin-top: 10px;
+}
+
+/* --- RESPONSIVIDAD GENERAL --- */
+@media (max-width: 900px) {
+    .tramites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tramite-card-center {
+        grid-column: auto;
+    }
+    .contacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tramites-grid {
+        grid-template-columns: 1fr;
+    }
+    .tramite-card-center {
+        grid-column: auto;
+    }
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS COMPLETOS DE LA PÁGINA DE SEGURIDAD (seguridad.html)
+   ========================================================================== */
+
+/* --- HERO SEGURIDAD (De borde a borde, sin deformaciones) --- */
+.seguridad-hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.seguridad-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Cubre todo el ancho y alto sin deformar la proporción */
+    object-position: center 35%; /* Ajusta el enfoque vertical de los rostros */
+    z-index: 1;
+}
+
+.seguridad-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Oscurecimiento sutil para contraste con texto blanco */
+    z-index: 2;
+}
+
+.seguridad-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.seguridad-hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-shadow: none; /* Textos institucionales sin sombra */
+}
+
+.seguridad-hero-overlay p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-shadow: none; /* Textos institucionales sin sombra */
+}
+
+
+/* --- SECCIÓN: FONOS EMERGENCIA --- */
+.fonos-emergencia-section {
+    max-width: 1200px;
+    margin: 60px auto 90px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.section-title-container .dash {
+    width: 35px;
+    height: 3px;
+    background-color: #01366c;
+}
+
+.section-title-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #01366c;
+    margin: 0;
+}
+
+.fonos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.fono-card {
+    background-color: #01366c; /* Color institucional exacto */
+    width: 100%;
+    max-width: 270px;
+    height: 270px;
+    border-radius: 8px; /* Bordes curvos institucionales */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15px 25px 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fono-card:hover {
+    transform: translateY(-5px);
+    background-color: #012850;
+}
+
+.fono-card-center {
+    grid-column: 2 / 4;
+    justify-self: center;
+}
+
+.fono-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Tamaño de los pictogramas alineado al estilo de trámites */
+.fono-icon img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+}
+
+.fono-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.fono-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.fono-number {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* --- SECCIÓN: ACTAS DE SEGURIDAD PÚBLICA & MENÚS DESPLEGABLES --- */
+.actas-seguridad-section {
+    max-width: 1100px;
+    margin: 80px auto 130px auto;
+    padding: 0 20px;
+}
+
+.actas-titulo-principal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #01366c;
+    margin-bottom: 25px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.actas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.acta-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px; /* Bordes curvos para el contenedor de cada año */
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.acta-bar {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+    transition: filter 0.2s ease;
+}
+
+.acta-bar:hover {
+    filter: brightness(0.92);
+}
+
+/* Primera barra (2026) en azul oscuro institucional */
+.acta-primary {
+    background-color: #01366c;
+}
+
+/* Barras siguientes (2025-2017) en tono gris/azulado */
+.acta-secondary {
+    background-color: #5c7895;
+}
+
+.acta-arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Rotar flecha al estar activo */
+.acta-bar.active .acta-arrow {
+    transform: rotate(180deg);
+}
+
+/* Contenedor desplegable de meses */
+.acta-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    background-color: #5c7895;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fila de cada mes dentro del desplegable */
+.mes-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s ease;
+}
+
+.mes-row:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mes-row i {
+    font-size: 1.1rem;
+}
+
+
+/* --- RESPONSIVIDAD GENERAL --- */
+@media (max-width: 1100px) {
+    .fonos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .fono-card-center {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .seguridad-hero {
+        height: 350px;
+    }
+    .seguridad-hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+    .fonos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fono-card-center {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .seguridad-hero {
+        height: 280px;
+    }
+    .seguridad-hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+    .seguridad-hero-overlay p {
+        font-size: 0.8rem;
+    }
+    .fonos-grid {
+        grid-template-columns: 1fr;
+    }
+    .fono-card-center {
+        grid-column: auto;
+    }
+}
+/* --- ESTILOS DETALLE DE NOTICIA --- */
+.noticia-hero {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.noticia-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.noticia-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Capa oscura para contraste perfecto */
+    z-index: 2;
+}
+
+.noticia-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.noticia-hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.noticia-detalle-container {
+    max-width: 850px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.noticia-meta-info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.noticia-tag-imz {
+    font-weight: 700;
+    color: #01366c;
+}
+
+.noticia-cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.noticia-cuerpo p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem; /* Tamaño aumentado para mayor legibilidad */
+    line-height: 1.75;  /* Espaciado cómodo entre líneas */
+    color: #2c3e50;     /* Tono oscuro formal y legible */
+    margin: 0;
+    font-weight: 400;
+}
+
+.noticia-volver {
+    margin-top: 50px;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #01366c;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #012850;
+}
+
+/* Enlace contenedor en la tarjeta del index */
+.news-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* ==========================================================================
+   PÁGINA: SERVICIOS DE SALUD (salud.html)
+   ========================================================================== */
+
+/* --- 1. HERO Y BANNER DE EMERGENCIA --- */
+.salud-hero {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.salud-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.salud-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.salud-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.salud-hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.salud-hero-title .dash {
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+/* Caja de Emergencia (Callout rojo prioritario) */
+.emergencia-box {
+    background-color: #a11818;
+    border-radius: 8px;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 22px 25px;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.emergencia-box h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.emergencia-cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.emergencia-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.emergencia-col span {
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.emergencia-col span strong {
+    font-weight: 700;
+}
+
+.btn-emergencia-llamar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #801010;
+    border: 1.5px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 7px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 140px;
+}
+
+.btn-emergencia-llamar:hover {
+    background-color: #ffffff;
+    color: #a11818;
+}
+
+/* --- 2. SECCIONES DE CONTENIDO DE SALUD --- */
+.salud-seccion {
+    margin-bottom: 75px;
+}
+
+.salud-intro-text {
+    max-width: 820px;
+    margin: 0 auto 16px auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.salud-bajada-text {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 40px;
+}
+
+/* --- 3. GRILLA Y TARJETAS MODULARES DE SALUD --- */
+.salud-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.salud-card {
+    background-color: #01366c;
+    width: 230px;
+    height: 230px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 15px 20px 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.salud-card:hover {
+    transform: translateY(-5px);
+    background-color: #012850;
+}
+
+.salud-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.salud-card-icon img {
+    max-width: 90px;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+/* Marcador visual reservado para que el usuario inserte su ícono */
+.salud-placeholder-box {
+    width: 85px;
+    height: 85px;
+    border: 2px dashed rgba(255, 255, 255, 0.45);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.8rem;
+    transition: border-color 0.3s ease;
+}
+
+.salud-card:hover .salud-placeholder-box {
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+}
+
+.salud-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.25;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* ==========================================================================
+   PÁGINA: TARJETA DE VECINO (tarjeta.html)
+   ========================================================================== */
+
+/* --- 1. HERO TARJETA VECINO --- */
+.tarjeta-hero {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.tarjeta-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.tarjeta-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+.tarjeta-hero-overlay {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 750px;
+}
+
+.tarjeta-hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.tarjeta-hero-title .dash {
+    display: inline-block;
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+/* Caja de llamado a la acción (CTA) en el Hero */
+.tarjeta-hero-box {
+    background-color: #01366c;
+    border-radius: 8px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 28px 30px;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.tarjeta-hero-box p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin: 0;
+    text-align: center;
+}
+
+.btn-tarjeta-cta {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-tarjeta-cta:hover {
+    background-color: #ffffff;
+    color: #01366c;
+}
+
+/* --- 2. SECCIÓN BENEFICIOS --- */
+.tarjeta-seccion {
+    margin-bottom: 75px;
+}
+
+.tarjeta-subtitle {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 45px;
+}
+
+/* Grilla de 8 tarjetas de beneficios (4 columnas x 2 filas) */
+.tarjeta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.tarjeta-card {
+    background-color: #01366c;
+    width: 230px;
+    height: 230px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 15px 20px 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta-card:hover {
+    transform: translateY(-5px);
+    background-color: #012850;
+}
+
+.tarjeta-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tarjeta-card-icon img {
+    max-width: 90px;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.tarjeta-placeholder-box {
+    width: 85px;
+    height: 85px;
+    border: 2px dashed rgba(255, 255, 255, 0.45);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.8rem;
+    transition: border-color 0.3s ease;
+}
+
+.tarjeta-card:hover .tarjeta-placeholder-box {
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+}
+
+.tarjeta-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.25;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* --- 3. SECCIÓN: ¿CÓMO OBTENERLA? (DOS COLUMNAS) --- */
+.tarjeta-obtenerla-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 45px;
+    max-width: 1050px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Texto introductorio de requisitos */
+.requisitos-texto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+/* Cajas azules de requisitos documentales */
+.requisitos-caja-azul {
+    background-color: #01366c;
+    border-radius: 8px;
+    padding: 24px 28px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.requisitos-caja-azul ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.requisitos-caja-azul li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.requisitos-caja-azul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Columna derecha: ilustraciones, lugares y botón */
+.tarjeta-info-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Caja de ilustración placeholder */
+.tarjeta-ilustracion-placeholder {
+    width: 100%;
+    max-width: 280px;
+    height: 140px;
+    border: 2px dashed #01366c;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #01366c;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tarjeta-ilustracion-placeholder i {
+    font-size: 3rem;
+}
+
+/* Caja roja de lugares de atención */
+.lugares-atencion-box {
+    background-color: #a11818;
+    border-radius: 8px;
+    width: 100%;
+    padding: 25px 30px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lugares-atencion-box h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.lugares-atencion-box p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.lugares-atencion-box p:last-child {
+    margin-bottom: 0;
+}
+
+.lugares-atencion-box strong {
+    font-weight: 700;
+}
+
+/* Segundo Botón CTA (Sólido azul) */
+.btn-tarjeta-cta-solido {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    background-color: #01366c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-tarjeta-cta-solido:hover {
+    background-color: #012850;
+    transform: translateY(-2px);
+}
+
+/* Responsividad para la sección de 2 columnas */
+@media (max-width: 850px) {
+    .tarjeta-obtenerla-grid {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-info-lateral {
+        width: 100%;
+    }
+}

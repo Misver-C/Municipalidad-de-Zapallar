@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Pagos de Permisos de Circulación - Municipalidad de Zapallar</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER (REUTILIZABLE) ==================== -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <div class="header-blue-section">
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <a href="contacto.html" class="btn-contacto">CONTACTO</a>
+            </div>
+            
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <nav class="header-nav">
+    <ul>
+        <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+        <li class="dropdown">
+            <a href="quienes_somos.html">QUIENES SOMOS</a>
+            <ul class="dropdown-menu">
+                <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+            </ul>
+        </li>
+        <li><a href="tramites.html" >TRÁMITES</a></li>
+        <li><a href="seguridad.html">SEGURIDAD</a></li>
+        <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+            <a href="#">MEDIOAMBIENTE</a>
+            <ul class="dropdown-menu">
+                <li><a href="reciclaje.html">RECICLAJE</a></li>
+                <li><a href="#">SUSTENTABILIDAD</a></li>
+                <li><a href="#">ÁREAS VERDES</a></li>
+                <li><a href="#">MANTENCIÓN</a></li>
+            </ul>
+        </li>
+        <li><a href="cultura.html">CULTURA</a></li>
+        <li><a href="tarjeta.html">TARJETA DE VECINO</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <!-- ==================== CONTENIDO PRINCIPAL: PORTAL DE PAGO ==================== -->
+    <main class="main-container" style="margin-top: 30px; margin-bottom: 60px;">
+        
+        <!-- Franja de Bienvenida institucional -->
+        <div style="background-color: #01366c; color: #ffffff; padding: 20px 25px; border-radius: 6px; margin-bottom: 25px; font-family: 'Poppins', sans-serif;">
+            <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Bienvenidos</p>
+            <h1 style="margin: 5px 0 0 0; font-size: 1.5rem; font-weight: 700;">Portal de Pagos de Permisos de Circulación</h1>
+        </div>
+
+        <p style="font-family: 'Poppins', sans-serif; color: #555555; font-size: 1rem; margin-bottom: 30px;">
+            Al sitio de renovación de permisos de circulación de la Municipalidad de Zapallar. Aquí podrá hacer todos los trámites con un click, ahorrando tiempo y trámites engorrosos.
+        </p>
+
+        <!-- Contenedor Principal en Dos Columnas -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;" class="pago-grid-container">
+            
+            <!-- Columna Izquierda: Formulario, Botones y Ayuda (Todo junto en la izquierda) -->
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                
+                <!-- Caja Formulario -->
+                <div style="background: #ffffff; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px;">
+                    <h3 style="font-family: 'Poppins', sans-serif; color: #01366c; font-size: 1.15rem; font-weight: 700; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #eaeaea; padding-bottom: 10px;">
+                        INGRESE NÚMERO PATENTE Y RUT:
+                    </h3>
+
+                    <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif;">
+                        <div>
+                            <label style="display: block; font-weight: 600; font-size: 0.9rem; color: #333333; margin-bottom: 5px;">Patente:</label>
+                            <span style="display: block; font-size: 0.8rem; color: #777777; margin-bottom: 5px; font-style: italic;">Ingreselo sin guión.</span>
+                            <input type="text" placeholder="Ej.: AAAA19" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 600; font-size: 0.9rem; color: #333333; margin-bottom: 5px;">RUT:</label>
+                            <span style="display: block; font-size: 0.8rem; color: #777777; margin-bottom: 5px; font-style: italic;">Ingreselo sin puntos y con guión.</span>
+                            <input type="text" placeholder="Ej.: 12345678-9" style="width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">
+                        </div>
+
+                        <button type="button" style="background-color: #01366c; color: #ffffff; border: none; padding: 12px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s; margin-top: 10px;" onmouseover="this.style.background='#012850'" onmouseout="this.style.background='#01366c'">
+                            Pagar
+                        </button>
+
+                        <button type="button" style="background-color: #01366c; color: #ffffff; border: none; padding: 12px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#012850'" onmouseout="this.style.background='#01366c'">
+                            Pagar Permiso de Circulación Año 2025
+                        </button>
+
+                        <button type="button" style="background-color: #01366c; color: #ffffff; border: none; padding: 12px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#012850'" onmouseout="this.style.background='#012850'">
+                            Recuperar Permisos Anteriores pagados por Internet
+                        </button>
+                    </form>
+
+                    <!-- Medios de Pago -->
+                    <div style="margin-top: 35px; font-family: 'Poppins', sans-serif;">
+                        <p style="font-weight: 700; color: #333333; font-size: 0.95rem; margin-bottom: 12px;">MEDIOS DE PAGO:</p>
+                        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; background: #f9f9f9; padding: 12px; border-radius: 6px; border: 1px solid #eaeaea;">
+                            <span style="font-weight: 800; color: #ff6600; font-size: 1.1rem;">webpay<span style="color: #0088cc; font-weight: 400;">+</span></span>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #444;">VISA | MASTERCARD | MAGNA | DINERS CLUB | REDCOMPRA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opciones de Ayuda (WhatsApp, Correo, Multas, Volver) -->
+                <div style="display: flex; flex-direction: column; gap: 15px; font-family: 'Poppins', sans-serif;">
+                    
+                    <!-- Caja WhatsApp -->
+                    <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; text-align: center; overflow: hidden;">
+                        <div style="padding: 12px; border-bottom: 1px solid #eaeaea; color: #333; font-size: 0.95rem;">
+                            Pinche aquí en caso de duda o consulta
+                        </div>
+                        <a href="https://wa.me/56947428315" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px; background: #fafafa; text-decoration: none; color: #333; font-weight: 700; font-size: 1.1rem;">
+                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.8rem;"></i> +569 47428315
+                        </a>
+                    </div>
+
+                    <!-- Caja Correo -->
+                    <a href="mailto:permisos@munizapallar.cl" style="display: block; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 18px; text-align: center; text-decoration: none; color: #333333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                        E-Mail: permisos@munizapallar.cl
+                    </a>
+
+                    <!-- Caja Multas -->
+                    <a href="#" style="display: block; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 18px; text-align: center; text-decoration: none; color: #333333; font-weight: 600; font-size: 0.95rem; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+                        Para consultar multas no pagadas haga click aquí
+                    </a>
+
+                    <!-- Nota aclaratoria y Botón Volver -->
+                    <div style="margin-top: 5px; font-size: 0.85rem; color: #555555; line-height: 1.5;">
+                        <p style="margin: 0 0 15px 0;">
+                            Si al realizar el ciclo de pago, no se activa automáticamente el boletín, debe ingresar nuevamente sus datos (Patente y Rut), encontrar un documento para imprimir.
+                        </p>
+                        <a href="tramites.html" class="btn-volver" style="display: inline-flex; align-items: center; gap: 8px; background-color: #555; color: #fff; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600;">
+                            &lt;&lt; Volver
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Columna Derecha: Todo unido sin espacios (Usted podrá + Requisitos + SOAP) -->
+            <div style="display: flex; flex-direction: column; gap: 25px; font-family: 'Poppins', sans-serif;">
+                
+                <!-- Cuadro 1: En este sitio usted podrá -->
+                <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <div style="background-color: #01366c; color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 1rem;">
+                        EN ESTE SITIO USTED PODRÁ:
+                    </div>
+                    <ul style="list-style: none; padding: 20px; margin: 0; display: flex; flex-direction: column; gap: 12px; color: #333333; font-size: 0.95rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Obtener el Permiso de circulación en Línea.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Pagar en línea: PAGO TOTAL, 1ERA CUOTA o 2DA CUOTA, usando múltiples medios de pago.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Consultar y chequear en línea los datos de su vehículo.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Comprar en línea el Seguro Obligatorio, en compañías adscritas a la Asociación de Aseguradoras de Chile A.G.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Imprimir los comprobantes desde su computador.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cuadro 2: Requisitos (Inmediatamente debajo) -->
+                <div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
+                    <div style="background-color: #01366c; color: #ffffff; padding: 12px 20px; font-weight: 700; font-size: 0.95rem;">
+                        REQUISITOS PARA PAGO EN LÍNEA: PAGO TOTAL O 1RA CUOTA:
+                    </div>
+                    <ul style="list-style: none; padding: 20px; margin: 0; display: flex; flex-direction: column; gap: 10px; color: #333333; font-size: 0.9rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Tener su vehículo inscrito en el registro comunal de Zapallar.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Estar al día con el pago del permiso de circulación del año anterior.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Tener la Revisión Técnica al día.
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 10px;">
+                            <span style="color: #ff6600; font-weight: bold;">▶</span> Haber obtenido Seguro Obligatorio por Internet, en compañías adscritas a la Asociación de Aseguradoras de Chile A.G.
+                        </li>
+                    </ul>
+
+                    <div style="background-color: #f5f5f5; padding: 10px 20px; font-weight: 700; font-size: 0.9rem; color: #333333; border-top: 1px solid #eaeaea;">
+                        REQUISITOS PARA PAGO EN LÍNEA 2DA.CUOTA
+                    </div>
+                    <div style="padding: 15px 20px; font-size: 0.9rem; color: #333333;">
+                        <span style="color: #ff6600; font-weight: bold; margin-right: 8px;">▶</span> Haber cancelado la 1era cuota de su permiso de circulación en la Municipalidad de Zapallar.
+                    </div>
+                </div>
+
+                <!-- Enlace SOAP -->
+                <div style="font-size: 0.9rem; color: #333333; padding-left: 5px;">
+                    Comprar Seguro Obligatorio(SOAP): <a href="#" style="color: #0066cc; font-weight: 600; text-decoration: none;">Asociación de Aseguradoras de Chile A.G.</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ==================== FOOTER (REUTILIZABLE) ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+</body>
+</html>

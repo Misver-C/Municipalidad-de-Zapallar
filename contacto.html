@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Zapallar - Contacto</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos generales del header y redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <div class="header-blue-section">
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <a href="contacto.html" class="btn-contacto" style="background-color: #ffffff; color: #003366;">CONTACTO</a>
+            </div>
+            
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+                <li class="dropdown">
+                    <a href="quienes_somos.html">QUIENES SOMOS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+                    </ul>
+                </li>
+                <li><a href="tramites.html">TRÁMITES</a></li>
+                <li><a href="seguridad.html">SEGURIDAD</a></li>
+                <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+                    <a href="#">MEDIOAMBIENTE</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reciclaje.html">RECICLAJE</a></li>
+                        <li><a href="#">SUSTENTABILIDAD</a></li>
+                        <li><a href="#">ÁREAS VERDES</a></li>
+                        <li><a href="#">MANTENCIÓN</a></li>
+                    </ul>
+                </li>
+                <li><a href="cultura.html">CULTURA</a></li>
+                <li><a href="tarjeta.html">TARJETA DE VECINO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== CONTENIDO PRINCIPAL: CONTACTO ==================== -->
+    <main class="main-container" style="margin-top: 60px; margin-bottom: 80px;">
+
+        <!-- ==================== SECCIÓN 1: ¿NECESITAS AYUDA? ¡ESCRÍBENOS! ==================== -->
+        <section class="salud-seccion" style="margin-bottom: 75px;">
+            <div class="section-title-container">
+                <span class="dash"></span>
+                <h2>¿Necesitas Ayuda? ¡Escríbenos!</h2>
+                <span class="dash"></span>
+            </div>
+
+            <p class="salud-intro-text">
+                Tu opinión es importante. Comunícate directamente con nosotros.
+            </p>
+
+            <p class="salud-bajada-text">
+                ¡Aquí atenderemos tus dudas, sugerencias, comentarios y felicitaciones!
+            </p>
+
+            <!-- Contenedor del Formulario con marco azul institucional grueso -->
+            <div style="max-width: 880px; margin: 0 auto; border: 5px solid #003366; border-radius: 4px; padding: 25px; background-color: #ffffff; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+                <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 16px;">
+                    <!-- Campo Nombre y Apellido -->
+                    <div>
+                        <input type="text" placeholder="Nombre y Apellido" style="width: 100%; padding: 14px 16px; border: 1px solid #dcdcdc; border-radius: 2px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #333333; background-color: #f7f9fa; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#003366'; this.style.backgroundColor='#ffffff';" onblur="this.style.borderColor='#dcdcdc'; this.style.backgroundColor='#f7f9fa';">
+                    </div>
+
+                    <!-- Campo Correo Electrónico -->
+                    <div>
+                        <input type="email" placeholder="Correo Electrónico" style="width: 100%; padding: 14px 16px; border: 1px solid #dcdcdc; border-radius: 2px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #333333; background-color: #f7f9fa; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#003366'; this.style.backgroundColor='#ffffff';" onblur="this.style.borderColor='#dcdcdc'; this.style.backgroundColor='#f7f9fa';">
+                    </div>
+
+                    <!-- Campo Teléfono -->
+                    <div>
+                        <input type="tel" placeholder="Teléfono" style="width: 100%; padding: 14px 16px; border: 1px solid #dcdcdc; border-radius: 2px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #333333; background-color: #f7f9fa; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='#003366'; this.style.backgroundColor='#ffffff';" onblur="this.style.borderColor='#dcdcdc'; this.style.backgroundColor='#f7f9fa';">
+                    </div>
+
+                    <!-- Campo Mensaje -->
+                    <div>
+                        <textarea placeholder="Mensaje" rows="7" style="width: 100%; padding: 14px 16px; border: 1px solid #dcdcdc; border-radius: 2px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #333333; background-color: #f7f9fa; outline: none; resize: vertical; min-height: 160px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#003366'; this.style.backgroundColor='#ffffff';" onblur="this.style.borderColor='#dcdcdc'; this.style.backgroundColor='#f7f9fa';"></textarea>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN 2: ¡ENCUÉNTRANOS Y SÍGUENOS! ==================== -->
+        <section class="salud-seccion" style="margin-bottom: 20px;">
+            <div class="section-title-container">
+                <span class="dash"></span>
+                <h2>¡Encuéntranos y síguenos!</h2>
+                <span class="dash"></span>
+            </div>
+
+            <p class="salud-bajada-text" style="max-width: 820px; margin: 0 auto 45px auto;">
+                ¡Infórmate de los últimos eventos y noticias de la región a través de nuestras redes sociales y espacios públicos!
+            </p>
+
+            <!-- Grilla de Tarjetas: 4 Redes Sociales -->
+            <div class="salud-grid">
+                <!-- Tarjeta 1: Instagram -->
+                <a href="https://www.instagram.com/munizapallar" target="_blank" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/contacto1.png" alt="Instagram">
+                    </div>
+                    <span class="salud-card-title">Instagram</span>
+                </a>
+
+                <!-- Tarjeta 2: Facebook -->
+                <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/contacto2.png" alt="Facebook">
+                    </div>
+                    <span class="salud-card-title">Facebook</span>
+                </a>
+
+                <!-- Tarjeta 3: Youtube -->
+                <a href="https://www.youtube.com/@MunicipalidaddeZapallar" target="_blank" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/contacto3.png" alt="Youtube">
+                    </div>
+                    <span class="salud-card-title">Youtube</span>
+                </a>
+
+                <!-- Tarjeta 4: Whatsapp -->
+                <a href="https://wa.me/56947428315" target="_blank" class="salud-card">
+                    <div class="salud-card-icon">
+                        <!-- Espacio reservado para imagen/ícono placeholder -->
+                        <img src="imagen_munizapallar/contacto4.png" alt="Whatsapp">
+                    </div>
+                    <span class="salud-card-title">Whatsapp</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

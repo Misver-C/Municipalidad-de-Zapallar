@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Zapallar - Tarjeta Vecino</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos generales del header y placeholders -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER (ESTÁNDAR REUTILIZABLE) ==================== -->
+    <header>
+        <div class="header-container">
+            <!-- Bloque izquierdo con el logo -->
+            <div class="header-logo">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Ilustre Municipalidad de Zapallar">
+            </div>
+            
+            <!-- Bloque azul central con redes sociales, buscador y contacto -->
+            <div class="header-blue-section">
+                <!-- Redes sociales -->
+                <div class="social-icons">
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/municipalidadzapallar" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Barra de búsqueda -->
+                <div class="header-search">
+                    <input type="text" id="searchInput" placeholder="">
+                    <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                </div>
+
+                <!-- Botón de contacto -->
+                <a href="contacto.html" class="btn-contacto">CONTACTO</a>
+            </div>
+            
+            <!-- Espacio en blanco derecho -->
+            <div class="header-right-spacer"></div>
+        </div>
+
+        <!-- Barra de navegación con TARJETA DE VECINO activo -->
+        <nav class="header-nav">
+    <ul>
+        <li><a href="index.html" aria-label="Inicio"><i class="fa-solid fa-house"></i></a></li>
+        <li class="dropdown">
+            <a href="quienes_somos.html">QUIENES SOMOS</a>
+            <ul class="dropdown-menu">
+                <li><a href="dep_municipales.html">DEP. MUNICIPALES</a></li>
+            </ul>
+        </li>
+        <li><a href="tramites.html" >TRÁMITES</a></li>
+        <li><a href="seguridad.html">SEGURIDAD</a></li>
+        <li><a href="salud.html">SALUD</a></li>
+                <li class="dropdown">
+            <a href="#">MEDIOAMBIENTE</a>
+            <ul class="dropdown-menu">
+                <li><a href="reciclaje.html">RECICLAJE</a></li>
+                <li><a href="#">SUSTENTABILIDAD</a></li>
+                <li><a href="#">ÁREAS VERDES</a></li>
+                <li><a href="#">MANTENCIÓN</a></li>
+            </ul>
+        </li>
+        <li><a href="cultura.html">CULTURA</a></li>
+        <li><a href="tarjeta.html"class="active">TARJETA DE VECINO</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <!-- ==================== HERO PORTADA (TARJETA VECINO) ==================== -->
+    <section class="tarjeta-hero">
+        <!-- Espacio reservado para la imagen de cabecera (Mujer con Tarjeta Vecino).
+             Puedes agregar tu imagen reemplazando el atributo src. -->
+        <img src="imagen_munizapallar/tarjeta1.png" alt="Tarjeta Vecino Zapallar" class="tarjeta-hero-img">
+        
+        <div class="tarjeta-hero-overlay">
+            <!-- Título Hero con guiones -->
+            <div class="tarjeta-hero-title">
+                <span class="dash"></span>
+                <h1>Tarjeta Vecino</h1>
+                <span class="dash"></span>
+            </div>
+
+            <!-- Caja Azul de llamado a la acción (CTA) -->
+            <div class="tarjeta-hero-box">
+                <p>¡Obtén tu Tarjeta Vecino Zapallar y descubre un mundo de beneficios que tenemos para ti!</p>
+                <!-- Botón 1 de acción directa hacia la sección de requisitos -->
+                <a href="#como-obtenerla" class="btn-tarjeta-cta">¡QUIERO OBTENERLA!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <main class="main-container">
+        
+        <!-- ==================== SECCIÓN 1: BENEFICIOS ==================== -->
+        <section class="tarjeta-seccion">
+            <div class="section-title-container">
+                <span class="dash"></span>
+                <h2>¡Obtén tu tarjeta y utiliza los beneficios!</h2>
+                <span class="dash"></span>
+            </div>
+
+            <p class="tarjeta-subtitle">
+                ¡Descubre todos los beneficios que tenemos para ofrecerte!
+            </p>
+
+            <!-- Grilla de Tarjetas de Beneficios (8 tarjetas: 4 en fila 1 y 4 en fila 2) -->
+            <div class="tarjeta-grid">
+                
+                <!-- Tarjeta 1: Amuch -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO:
+                             Ejemplo: <img src="imagen_munizapallar/amuch.png" alt="Amuch"> -->
+                        <img src="imagen_munizapallar/tarjeta4.png" alt="Amuch">
+                    </div>
+                    <span class="tarjeta-card-title">Amuch</span>
+                </a>
+
+                <!-- Tarjeta 2: Comercio -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta5.png" alt="Comercio">
+                    </div>
+                    <span class="tarjeta-card-title">Comercio</span>
+                </a>
+
+                <!-- Tarjeta 3: Deportes -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta6.png" alt="Deportes">
+                    </div>
+                    <span class="tarjeta-card-title">Deportes</span>
+                </a>
+
+                <!-- Tarjeta 4: Restoranes -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta7.png" alt="Restoranes">
+                    </div>
+                    <span class="tarjeta-card-title">Restoranes</span>
+                </a>
+
+                <!-- Tarjeta 5: Mascotas -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta8.png" alt="Mascotas">
+                    </div>
+                    <span class="tarjeta-card-title">Mascotas</span>
+                </a>
+
+                <!-- Tarjeta 6: Peluquería -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta9.png" alt="Peluquería">
+                    </div>
+                    <span class="tarjeta-card-title">Peluquería</span>
+                </a>
+
+                <!-- Tarjeta 7: Salud -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta10.png" alt="Salud">
+                    </div>
+                    <span class="tarjeta-card-title">Salud</span>
+                </a>
+
+                <!-- Tarjeta 8: Seguridad -->
+                <a href="#" class="tarjeta-card">
+                    <div class="tarjeta-card-icon">
+                        <!-- ESPACIO RESERVADO PARA TU IMAGEN / ÍCONO -->
+                        <img src="imagen_munizapallar/tarjeta11.png" alt="Seguridad">
+                    </div>
+                    <span class="tarjeta-card-title">Seguridad</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ==================== SECCIÓN 2: ¿CÓMO OBTENERLA? ==================== -->
+        <section class="tarjeta-seccion" id="como-obtenerla">
+            <div class="section-title-container">
+                <span class="dash"></span>
+                <h2>¿CÓMO OBTENERLA?</h2>
+                <span class="dash"></span>
+            </div>
+
+            <!-- Estructura en 2 Columnas -->
+            <div class="tarjeta-obtenerla-grid">
+                
+                <!-- Columna Izquierda: Requisitos Documentales -->
+                <div class="requisitos-col-izq">
+                    <p class="requisitos-texto">
+                        Para obtener tu tarjeta vas a necesitar los siguientes documentos que acrediten que eres residente de la comuna de Zapallar;
+                    </p>
+
+                    <!-- Caja Azul 1: Requisitos Residencia -->
+                    <div class="requisitos-caja-azul">
+                        <ul>
+                            <li>Escritura Propiedad</li>
+                            <li>Registro Social de Hogares</li>
+                            <li>Boleta de algún servicio básico a nombre del solicitante (Luz y Agua) correspondiente a alguno de los últimos 3 meses anteriores a la solicitud de tarjeta.</li>
+                            <li>Copia de contrato vigente de arriendo a nombre del titular, con declaración jurada de vigencia dentro del último año calendario.</li>
+                            <li>Estar inscrito en algún Centro de Salud Familiar de la Comuna (CESFAM)</li>
+                            <li>Tener domicilio electoral en la comuna</li>
+                            <li>Ser estudiante de algún colegio de la comuna</li>
+                        </ul>
+                    </div>
+
+                    <p class="requisitos-texto">
+                        Si vas a agregar algún integrante a tu grupo familiar, para acreditar el parentesco vas a necesitar ALGUNO de los siguientes documentos:
+                    </p>
+
+                    <!-- Caja Azul 2: Acreditación de Parentesco -->
+                    <div class="requisitos-caja-azul">
+                        <ul>
+                            <li>Certificado de Nacimiento o Libreta de familia. (Sólo para hijos menores de 18 años).</li>
+                            <li>Registro social de hogares</li>
+                            <li>Boleta de servicio a nombre del nuevo integrante con domicilio titular (Luz y Agua)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Ilustraciones, Lugares de Atención y Botón -->
+                <div class="tarjeta-info-lateral">
+                
+                    <!-- Caja Roja: Lugares de Atención -->
+                    <div class="lugares-atencion-box">
+                        <h3>Lugares de atención:</h3>
+                        <p><strong>Zapallar:</strong> Januario Ovalle 147</p>
+                        <p><strong>Catapilco:</strong> José María Mercado 478</p>
+                        <p><strong>La Laguna:</strong> Av. Carlos León Briceño 303</p>
+                    </div>
+
+                    <!-- Espacio reservado para ilustración de Tarjetas en abanico -->
+                    <!-- Cuando tengas la imagen, puedes reemplazar este bloque por: <img src="imagen_munizapallar/tu_abanico.png" alt="Tarjetas"> -->
+                    <img src="imagen_munizapallar/tarjeta3.png" alt="Tarjetas Vecino Zapallar" class="tarjeta-ilustracion-abanico">
+                    <!-- Botón 2: Quiero Obtenerla -->
+                    <a href="https://sertex2.stonline.cl/Zapallar/TarjetaVecino/FrontOffice/login.aspx" class="btn-tarjeta-cta-solido">¡QUIERO OBTENERLA!</a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER (PIE DE PÁGINA REUTILIZABLE) ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Columna 1: Logo institucional -->
+            <div class="footer-logo-col">
+                <img src="imagen_munizapallar/creditos_zapallar.jpg" alt="Municipalidad de Zapallar">
+            </div>
+
+            <!-- Columna 2: Contacto e Información -->
+            <div class="footer-col footer-info-col">
+                <p><strong>Alcalde: Gustavo Alessandri B.</strong></p>
+                <p><strong>I. Municipalidad de Zapallar</strong></p>
+                <p>+56 33 229 6800</p>
+                <p>Germán Riesco 399, Zapallar.</p>
+                <p>contacto@munizapallar.cl</p>
+                <br>
+                <p><strong>Horario de atención:</strong></p>
+                <p>Lunes - Jueves 8:30 a 14:00 y 15:00 a 17:30 horas</p>
+                <p>Viernes 8:30 a 14:00 y 15:00 a 16:30 horas</p>
+            </div>
+
+            <!-- Columna 3: Accesos Directos e Intranet -->
+            <div class="footer-col footer-links-col">
+                <p><strong>Accesos directos</strong></p>
+                <ul>
+                    <li><a href="#">Ordenanzas Municipales</a></li>
+                    <li><a href="#">Decretos Municipales</a></li>
+                    <li><a href="#">Plan de Desarrollo Comunal</a></li>
+                    <li><a href="#">Plan Regulador</a></li>
+                    <li><a href="#">Ley de Transparencia</a></li>
+                </ul>
+                <br>
+                <p><strong>Intranet</strong></p>
+                <ul>
+                    <li><a href="#" class="intranet-link">Intranet Salud</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Franja inferior de derechos -->
+        <div class="footer-bottom">
+            <p>Ilustre Municipalidad de Zapallar © 2024 / Alcalde de Zapallar Gustavo Alessandri B.</p>
+        </div>
+    </footer>
+
+    <!-- Archivo de JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
